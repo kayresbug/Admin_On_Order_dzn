@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/Sam4sAndroidUsbSdk.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/Sam4sAndroidUsbSdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

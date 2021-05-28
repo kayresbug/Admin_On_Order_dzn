@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="테이블관리"
+            android:textSize="24sp"
+            android:textColor="#8e8e8e"
+            android:lineSpacingExtra="3.3sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="34.7dp"
+            android:layout_gravity="right"
+            android:src="@drawable/add_circle_line"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="36.7dp"
+            android:layout_height="36.7dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57.3dp">
+
+        <LinearLayout
+            android:paddingLeft="8dp"
+            android:gravity="center_vertical"
+            android:background="#4c4948"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/menu_list_checkbox"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:text="테이블"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="정리"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="결제내역"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="비고"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/border_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="429.3dp">
+
+        <LinearLayout
+            android:background="@drawable/border_recyclerview"
+            android:layout_width="match_parent"
+            android:paddingLeft="8dp"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/table_recycler_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:gravity="center"
+                        android:id="@+id/table_list_checkbox"
+                        android:buttonTint="#707070"
+                        android:background="#fff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="1"
+                        android:id="@+id/table_table_no"
+                        android:textSize="16sp"
+                        android:textColor="#8e8e8e"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/btn_table_care"
+                        android:textSize="15.3sp"
+                        android:text="RESET"
+                        android:textColor="#4c4948"
+                        android:lineSpacingExtra="2sp"
+                        android:gravity="center"
+                        android:background="@drawable/btn_yellow_blackborder"
+                        android:layout_width="75dp"
+                        android:layout_height="35.7dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="8"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:background="@drawable/btn_grey"
+                        android:text="내역 확인하기"
+                        android:id="@+id/btn_table_payment_check"
+                        android:textSize="15.3sp"
+                        android:textColor="#ffffff"
+                        android:lineSpacingExtra="1.3sp"
+                        android:gravity="center"
+                        android:layout_width="130dp"
+                        android:layout_height="35.7dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/service_payment_status"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="RtlCompat" >
+
+                        <TextView
+                            android:id="@+id/btn_table_modiy"
+                            android:textAlignment="center"
+                            android:textSize="15.3sp"
+                            android:text="수정"
+                            android:textColor="#8e8e8e"
+                            android:background="@drawable/cash_border_rectangle"
+                            android:layout_width="65dp"
+                            android:layout_height="35.7dp"
+                            android:gravity="center_vertical" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#8e8e8e"
+            android:lineSpacingExtra="1.3sp"
+            android:text="삭제"
+            android:background="@drawable/cash_border_rectangle"
+            android:layout_width="80dp"
+            android:layout_height="25.7dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

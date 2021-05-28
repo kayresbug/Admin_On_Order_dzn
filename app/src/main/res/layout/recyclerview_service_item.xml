@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/border_recyclerview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="8dp"
+    android:layout_height="124dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/service_recycler_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:gravity="center"
+                android:id="@+id/service_list_checkbox"
+                android:buttonTint="#707070"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/call_table_no"
+                android:textSize="16sp"
+                android:textColor="#8e8e8e"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/call_req"
+                android:textSize="16sp"
+                android:textColor="#8e8e8e"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/call_time"
+                android:textSize="16sp"
+                android:textColor="#8e8e8e"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/service_payment_status"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="RtlCompat" >
+
+                <TextView
+                    android:id="@+id/pay_status_complete"
+                    android:textAlignment="center"
+                    android:text="대기"
+                    android:textColor="#8e8e8e"
+                    android:background="@drawable/cash_border_rectangle"
+                    android:layout_width="70dp"
+                    android:layout_height="26.7dp"
+                    android:gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

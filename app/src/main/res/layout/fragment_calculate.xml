@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:lineSpacingExtra="3.3sp"
+        android:textColor="#8e8e8e"
+        android:textSize="24sp"
+        android:text="집계/정산"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_call_date"
+            android:padding="7.2dp"
+            android:src="@drawable/calendar_todo_fill"
+            android:background="@drawable/border_grey_radius"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:paddingLeft="12.7dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_marginLeft="4.7dp"
+            android:textColor="#8e8e8e"
+            android:background="@drawable/border_grey_radius"
+            android:id="@+id/calc_date_start"
+            android:layout_width="153.3dp"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:layout_marginLeft="4.7dp"
+            android:layout_marginRight="4.7dp"
+            android:gravity="center"
+            android:textColor="#8e8e8e"
+            android:text=" ~ "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:paddingLeft="12.7dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="#8e8e8e"
+            android:background="@drawable/border_grey_radius"
+            android:id="@+id/calc_date_end"
+            android:layout_width="153.3dp"
+            android:layout_height="36dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="34.7dp"
+        android:layout_width="match_parent"
+        android:layout_height="233.3dp">
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+                android:text="판매현황"
+                android:background="#4c4948"
+                android:layout_width="match_parent"
+                android:layout_height="21.7dp" />
+
+            <LinearLayout
+                android:background="@drawable/border_grey"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="총 판매액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_total_price"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="총 반품액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_total_return"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="총 매출"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_total_sales"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="총 할인액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_total_discount"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="실매출액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_actual_sales"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="과세매출액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_tax_sale"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="부가세액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_vat_sale"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="면세매출액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_duty_free"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#4c4948"
+                            android:text="순 매출액"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_net_sales"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#4c4948"
+                            android:text=""
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="12sp"
+                android:textColor="#ffffff"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center"
+                android:text="결제수단별 매출내역"
+                android:background="#4c4948"
+                android:layout_width="match_parent"
+                android:layout_height="21.7dp" />
+
+            <LinearLayout
+                android:background="@drawable/border_grey"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="현금"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_cash"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="신용+현금IC"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_credit"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="외상"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="상품권"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_gift_card"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="제휴카드"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_affiliatecard"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="회원마일리지"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_milelege"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="식권"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_meal_ticket"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="기타"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/calc_other"
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#8e8e8e"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:background="#cecece"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"/>
+
+                <LinearLayout
+                    android:paddingRight="14dp"
+                    android:paddingLeft="14dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:textSize="12sp"
+                            android:textColor="#4c4948"
+                            android:text="결제합계"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center_vertical|right"
+                            android:textSize="12sp"
+                            android:textColor="#4c4948"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_marginRight="4.7dp"
+            android:textColor="#8e8e8e"
+            android:background="@drawable/border_grey_radius"
+            android:layout_width="172.7dp"
+            android:layout_height="36dp" />
+
+        <ImageView
+            android:padding="7.2dp"
+            android:src="@drawable/search_line"
+            android:background="@drawable/border_grey_radius"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/border_grey"
+        android:layout_marginTop="13.3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#f9bf3d"
+            android:layout_width="match_parent"
+            android:layout_height="26.7dp">
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="테이블"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="승인여부"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="거래일시"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="3.6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="총 금액"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="9.7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="카드번호"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calc_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <View
+            android:background="#cecece"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

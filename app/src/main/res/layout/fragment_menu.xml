@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:lineSpacingExtra="3.3sp"
+        android:textColor="#8e8e8e"
+        android:textSize="24sp"
+        android:text="메뉴관리"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_menu_date"
+                android:padding="7.2dp"
+                android:src="@drawable/calendar_todo_fill"
+                android:background="@drawable/border_grey_radius"
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+
+            <TextView
+                android:paddingLeft="12.7dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:layout_marginLeft="4.7dp"
+                android:textColor="#8e8e8e"
+                android:background="@drawable/border_grey_radius"
+                android:id="@+id/menu_date_result"
+                android:layout_width="241.3dp"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/add_circle_line"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="36.7dp"
+            android:layout_height="36.7dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginTop="34.7dp"
+        android:layout_width="match_parent"
+        android:layout_height="57.3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:background="#4c4948"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:gravity="center"
+                    android:id="@+id/menu_list_checkbox"
+                    android:buttonTint="#fff"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="메뉴명"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="가격"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="정보"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#fff"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="옵션"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/border_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="124.3dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:gravity="center"
+                    android:buttonTint="#707070"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:background="#cecece"
+                    android:layout_width="88dp"
+                    android:layout_height="65.3dp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginRight="3.3dp"
+                        android:gravity="center"
+                        android:textColor="#8e8e8e"
+                        android:text="수정"
+                        android:background="@drawable/cash_border_rectangle"
+                        android:layout_width="50dp"
+                        android:layout_height="18.7dp"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="삭제"
+                        android:background="@drawable/card_border_rectangle"
+                        android:layout_width="50dp"
+                        android:layout_height="18.7dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14.8sp"
+                    android:textColor="#8e8e8e"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="홍합짬뽕탕"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14.8sp"
+                    android:textColor="#8e8e8e"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="20,000원"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14.8sp"
+                    android:textColor="#8e8e8e"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="얼큰한 국물과 ..."
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#8e8e8e"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="매운맛"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:background="#cecece"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

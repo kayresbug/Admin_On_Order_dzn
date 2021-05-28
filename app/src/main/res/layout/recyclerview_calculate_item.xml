@@ -1,0 +1,92 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="26.7dp">
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calc_table_no"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center"
+            android:text="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calc_check_approval"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center"
+            android:text="O"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calc_payment_time"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center"
+            android:text="202012081330"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="3.6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calc_item_total_price"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center"
+            android:text="100,000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="9.7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/calc_card_no"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center"
+            android:text="4456-7589-****-****"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
